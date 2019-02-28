@@ -3,18 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
+package view;
 
-import controller.Controller;
+import javax.swing.JPanel;
 
 /**
  *
  * @author oscar
  */
-public class Main {
+public class JPRight extends JPanel{
     
-    
-    public static void main(String[] args) {
-        new Controller();
-    }
 }

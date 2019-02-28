@@ -3,18 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
+package view;
 
 import controller.Controller;
+import java.awt.Color;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import javax.swing.JPanel;
 
 /**
  *
  * @author oscar
  */
-public class Main {
+public class JPLeft extends JPanel{
     
     
-    public static void main(String[] args) {
-        new Controller();
+    public JPLeft(Controller controller){
+        
     }
+    
+    private void init(){
+        
+    }
+    
 }

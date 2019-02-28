@@ -3,18 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
-
-import controller.Controller;
+package view;
 
 /**
  *
  * @author oscar
  */
-public class Main {
+public class JBMenu {
     
-    
-    public static void main(String[] args) {
-        new Controller();
-    }
 }
