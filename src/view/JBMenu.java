@@ -5,10 +5,20 @@
  */
 package view;
 
+import controller.Controller;
+import java.awt.Color;
+import javax.swing.JPanel;
+
 /**
  *
  * @author oscar
  */
-public class JBMenu {
+public class JBMenu extends JPanel{
     
+    private Controller controller;
+    
+    public JBMenu(Controller controller){
+        this.controller = controller;
+        this.setBackground(Color.red);
+    }
 }

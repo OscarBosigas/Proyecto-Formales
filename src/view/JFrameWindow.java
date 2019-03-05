@@ -22,11 +22,13 @@ public class JFrameWindow extends JFrame {
     private JPanel aux1, aux2, south;
     private JLabel icon;
     private JPLeft jPLeft;
+    private JBMenu jBMenu;
 
     public JFrameWindow(Controller controller) {
         this.controller = controller;
         this.jPUp = new JPUp(controller);
         this.jPLeft = new JPLeft(controller);
+        jBMenu = new JBMenu(controller);
         init();
     }
 
@@ -43,8 +45,8 @@ public class JFrameWindow extends JFrame {
 
         aux1.add(jPUp);
 
-        aux2 = new JPanel();
-        
+        aux2 = new JPanel(new BorderLayout());
+        aux2.add(jBMenu, BorderLayout.NORTH);
         
         south = new JPanel();
         
