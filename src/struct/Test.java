@@ -1,17 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package struct;
 
-import struct.Automaton;
-import struct.Stade;
-
-/**
- *
- * @author Felipe Cristancho
- */
 public class Test {
     
     
@@ -20,7 +8,6 @@ public class Test {
         Automaton automaton = new Automaton();
         Stade root = new Stade("q0", false);
         automaton.setInitialStade(root);
-//        root.setInitial(true);
         Stade q1 = new Stade("q1", false);
         Stade q2 = new Stade("q2",true);
         Stade q3 = new Stade("q3",true);
