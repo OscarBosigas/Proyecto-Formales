@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package models;
+package struct;
 
 /**
  *
@@ -12,9 +12,9 @@ package models;
 public class Funcion {
 
     private String estado1, estado2;
-    private char transicion;
+    private String transicion;
 
-    public Funcion(String estado1, String estado2, char transicion) {
+    public Funcion(String estado1, String estado2, String transicion) {
         this.estado1 = estado1;
         this.estado2 = estado2;
         this.transicion = transicion;
@@ -36,11 +36,11 @@ public class Funcion {
         this.estado2 = estado2;
     }
 
-    public char getTransicion() {
+    public String getTransicion() {
         return transicion;
     }
 
-    public void setTransicion(char transicion) {
+    public void setTransicion(String transicion) {
         this.transicion = transicion;
     }
 

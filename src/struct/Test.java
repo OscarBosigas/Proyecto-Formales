@@ -5,11 +5,8 @@
  */
 package struct;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import struct.Graph;
-import struct.Node;
-import struct.Transition;
+import struct.Automaton;
+import struct.Stade;
 
 /**
  *
@@ -20,28 +17,27 @@ public class Test {
     
     
     public static void main(String[] args) {
-        Graph grafo = new Graph();
-        Node root = new Node("q0", false);
-        root.setIsInitial(true);
-        Node q1 = new Node("q1", false);
-        Node q2 = new Node("q2",true);
-        Node q3 = new Node("q3",true);
-        Node q4 = new Node ("q4",false);
-        grafo.setRoot(root);
-        
-        grafo.transicion(root, q1, "a");
-        grafo.transicion(q1, q1, "a");
-        grafo.transicion(q1, q2, "b");
-        grafo.transicion(q2, q1, "a");
-        grafo.transicion(root, q3, "c");
-        grafo.transicion(q2, q4, "b");
-        
+        Automaton automaton = new Automaton();
+        Stade root = new Stade("q0", false);
+        automaton.setInitialStade(root);
+//        root.setInitial(true);
+        Stade q1 = new Stade("q1", false);
+        Stade q2 = new Stade("q2",true);
+        Stade q3 = new Stade("q3",true);
+        Stade q4 = new Stade ("q4",false);
+        automaton.setRoot(root);
+        automaton.transicion(root, q1, "a");
+        automaton.transicion(q1, q1, "a");
+        automaton.transicion(q1, q2, "b");
+        automaton.transicion(q2, q1, "a");
+        automaton.transicion(root, q3, "c");
+        automaton.transicion(q2, q4, "b");
         String palabra = "aabaaaaaba";
         
         try {           
-            grafo.validateString(palabra, root,0);
-            grafo.getListNodes().add(0, root);
-            grafo.printList();
+            automaton.validateString(palabra);
+            automaton.getListNodes().add(0, root);
+            automaton.printList();
         } catch (Exception ex) {
             
         }

@@ -12,20 +12,27 @@ import java.util.List;
  *
  * @author Felipe Cristancho
  */
-public class Node {
+public class Stade {
     
     private String name;
     private List<Transition> listTransition;
     private boolean isInitial;
-    private boolean isFinal;
+    private boolean isAceptable;
 
-    public Node(String name,boolean isFinal) {
+    public Stade(String name) {
+    	listTransition = new ArrayList<>();
+    	this.name = name;
+    	this.isAceptable = false;
+    	this.isInitial = false;
+    }
+    public Stade(String name, boolean isFinal) {
         listTransition = new ArrayList<Transition>();
         this.name = name;
-        this.isFinal = isFinal;
+        this.isAceptable = isFinal;
+        this.isInitial = false;
     }
 
-    public Node(){}
+    public Stade(){}
     
     public String getName() {
         return name;
@@ -43,21 +50,30 @@ public class Node {
         this.listTransition.add(transition);
     }
 
-    public boolean isIsInitial() {
+    public boolean isInitial() {
         return isInitial;
     }
 
-    public void setIsInitial(boolean isInitial) {
+    public void setInitial(boolean isInitial) {
         this.isInitial = isInitial;
     }
 
-    public boolean isIsFinal() {
-        return isFinal;
+    public boolean isAceptable() {
+        return isAceptable;
     }
 
-    public void setIsFinal(boolean isFinal) {
-        this.isFinal = isFinal;
+    public void setAceptable(boolean isAceptable) {
+        this.isAceptable = isAceptable;
     }
 
-    
+    @Override
+    public String toString() {
+    	if (isAceptable) {
+    		return "Estado = \t  name:    \t" + name + "\t    tipo:  \t Aceptable";
+		}
+    	if (isInitial) {
+    		return "Estado = \t  name:    \t" + name + "\t    tipo:  \t Inicial";
+		}
+    	return "Estado = \t  name:    \t" + name + "\t    tipo:  \t Transicion";
+    }
 }

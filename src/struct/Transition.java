@@ -11,20 +11,20 @@ package struct;
  */
 public class Transition {
     
-    private Node next;
-    private String symbol;
+    private Stade next;
+    private String character;
 
-    public Transition(Node next, String symbol) {
+    public Transition(Stade next, String character) {
         this.next = next;
-        this.symbol = symbol;
+        this.character = character;
     }
 
-    public Node getNext() {
+    public Stade getNext() {
         return next;
     }
 
-    public String getSymbol() {
-        return symbol;
+    public String getCharacter() {
+        return character;
     }
     
 }
