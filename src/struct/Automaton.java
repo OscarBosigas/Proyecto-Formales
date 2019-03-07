@@ -146,4 +146,8 @@ public class Automaton {
         return String.valueOf(text.charAt(0));
     }
     
+    public boolean isRoot(){
+        return this.getRoot() == null;
+    }
+    
 }
