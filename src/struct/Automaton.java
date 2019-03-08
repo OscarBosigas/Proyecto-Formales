@@ -2,6 +2,7 @@ package struct;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 public class Automaton {
     
@@ -30,9 +31,12 @@ public class Automaton {
     public void setRoot(Stade root) {
     	listNodes.add(root);
         this.root = root;
+        
+        System.out.println(root.getName());
     }
     
     public void transicion(Stade actual, Stade next, String character) {
+        
     	if(!comprobateStade(next)) {
     		listNodes.add(next);
     		if (next.isAceptable()) {
@@ -128,14 +132,18 @@ public class Automaton {
         }
         if (node.isAceptable()) {
         	System.out.println("La palabra fue Aceptada");
+                JOptionPane.showMessageDialog(null, "La palabra fue Aceptada");
 		} else {
-			System.out.println("La palabra fue Rechazada");
+            System.out.println("La palabra fue rechazada");
+                    JOptionPane.showMessageDialog(null, "La palabra fue Rechazada");
 		}
     }
     
     public void setInitialStade(Stade stade) {
     	initialStade = stade;
     	stade.setInitial(true);
+        System.out.println("qwertyuio-----------------------------------------------"+ stade.getName());
+        
     }
 
     public List<Stade> getListNodes() {
@@ -144,10 +152,6 @@ public class Automaton {
     
     public String getLetter(String text){
         return String.valueOf(text.charAt(0));
-    }
-    
-    public boolean isRoot(){
-        return this.getRoot() == null;
     }
     
 }

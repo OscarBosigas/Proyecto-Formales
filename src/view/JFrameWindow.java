@@ -40,7 +40,7 @@ public class JFrameWindow extends JFrame {
 
         this.setUndecorated(true);
 
-        aux1 = new JPanel(new GridLayout(1, 1));
+        aux1 = new JPanel(new GridLayout(2, 1));
         this.add(aux1, BorderLayout.NORTH);
 
         aux1.add(jPUp);

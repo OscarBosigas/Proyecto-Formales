@@ -1,9 +1,6 @@
 package struct;
 
 public class Test {
-    
-    
-    
     public static void main(String[] args) {
         Automaton automaton = new Automaton();
         Stade root = new Stade("q0", false);
@@ -19,7 +16,7 @@ public class Test {
         automaton.transicion(q2, q1, "a");
         automaton.transicion(root, q3, "c");
         automaton.transicion(q2, q4, "b");
-        String palabra = "aabaaaaaba";
+        String palabra = "aabaaaaab";
         
         try {           
             automaton.validateString(palabra);
